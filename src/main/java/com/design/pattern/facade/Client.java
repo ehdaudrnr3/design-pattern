@@ -12,6 +12,7 @@ public class Client {
         emailMessage.setTo("kim@naver.com");
         emailMessage.setSubject("squid game");
         emailMessage.setText("all die");
+        emailMessage.setCc("lee@gmail.com");
         emailSender.send(emailMessage);
     }
 }

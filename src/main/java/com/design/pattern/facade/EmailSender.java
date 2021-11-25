@@ -1,6 +1,7 @@
 package com.design.pattern.facade;
 
 
+import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -23,6 +24,8 @@ public class EmailSender {
         try {
              MimeMessage mimeMessage = new MimeMessage(session);
              mimeMessage.setFrom(new InternetAddress(message.getFrom()));
+             mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(message.getTo()));
+             mimeMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(message.getCc()));
              mimeMessage.setSubject(message.getSubject());
              mimeMessage.setText(message.getText());
 

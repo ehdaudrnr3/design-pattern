@@ -9,6 +9,8 @@ public class EmailMessage {
 
     private String text;
 
+    private String cc;
+
     public String getFrom() {
         return from;
     }
@@ -39,5 +41,13 @@ public class EmailMessage {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getCc() {
+        return cc;
+    }
+
+    public void setCc(String cc) {
+        this.cc = cc;
     }
 }
